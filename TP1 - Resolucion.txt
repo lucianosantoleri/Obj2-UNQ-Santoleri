@@ -1,0 +1,144 @@
+1- PROTOCOLOS DE UNA CLASE:
+
+- Elijo la opcion 2, porque, las variables de instancia las inicializa
+  el mismo objeto al ser instanciado. Luego, el protocolo de mensajes que 
+  ese objeto puede responder hace que se reubique la variable
+  esquinaSuperiorIzquierda.
+
+---------------------
+
+
+2 - DELEGACION:
+
+- Elijo la opcion 2 porque respeta el encapsulamiento, ya que la clase Jefe
+  no tiene porque saber como se busca un fichero si lo sabe el secretario.
+  Por eso le delega la tarea a la clase Secretario.
+
+
+---------------------
+
+
+3 - POLIMORFISMO:
+
+Opcion 1) - Demasiado usos del If cuando se puede delegar en otras clases esas tareas.
+            Asi evitar inconvenientes a futuro y generar polimorfismo.
+
+Opcion 2) - Mismo inconveniente que opcion anterior, la subdivicion de tareas y el polimorfismo ayudan
+            a mejorar el codigo.
+
+Opcion 3) - No esta clara la operacion extraer(unMonto), ademas, porque el uso del if dificulta su desarrollo.
+            Otra cosa, el metodo en si, no sufre muchos cambios, no hace falta la clase padre.
+            Simplemente, podria heredarse una de otra y modificar el unico minimo cambio que posee al agregar la condicion
+            self.rojoPermitido() en el IF.
+
+Opcion 4) - El metodo extraer(unMonto) en CuentaBancaria deberia ser abstracto, ya que nunca se va a aplicar directo.
+            Sino que siempre se aplicara una de sus subclases.
+
+
+
+---------------------
+
+
+ACTIVIDAD DE LECTURA N°1
+
+1)- El acceso directo a las variables significa que desde una clase podes modificar y manipular las variables
+    de instancia a tu antojo, sin necesidad de "permisos". Esto puede ser peligroso, sobre todo si el codigo va 
+   creciendo cada vez mas. 
+   Un ejemplo:
+                 class Persona {
+			var edad
+			
+			method nuevaPersona(suEdad) {
+				new Persona (edad = suEdad)
+			}
+		}
+
+   Esto a la larga, produce que se pueda modificar facilmente tus variables desde cualquier acceso publico a ellas
+   reduciendo su seguridad y desprotegiendo todo el codigo. Ademas, se vuelve vulnerable ya que cualquier cambio
+   afectaria todo el codigo en general.
+
+
+
+2)- El acceso indirecto a las variables de instancia se genera a traves de metodos accesors. Estos son los metodos
+    getters y setters. Son metodos que te permiten generar el encapuslamiento correspondiente para tus clases,
+    protegiendo a futuro cualquier tipo de intento de modificacion publico. Pero aun permitiendo la visualizacion
+    de las variables y su obtencion y/o modificacion de ser necesario.
+    Ejemplo:
+
+                 class Persona {
+			private var edad
+
+			method getEdad() {
+				return edad
+			}
+			method setEdad(nuevaEdad) {
+				edad = nuevaEdad
+			}
+			method nuevaPersona(suEdad) {
+				new Persona (this.setEdad(suEdad))
+			}
+		}
+
+
+
+3)- Las desventajas de usar metodos getters y setters es que si tu codigo apenas conlleva un puñadito de mensajes
+    y no es un codigo tan complejo, entonces seria estar duplicando o sumando mucho mas codigo innecesario.
+    Las ventajas, a mi parecer, son muchas mas. Por ejemplo, te permite el encapsulamiento, la seguridad en tu codigo.
+    El continuar desarrollando y agrandando tu codigo tanto como desees si la necesidad de preocuparse por cambiar 
+    algo en cuanto a las variables de instancia que te afecte todo el programa, y elegir vos que variables hacer
+    publicas o darles posibilidad de modificacion y cuales no.
+
+
+
+-------------------------
+
+
+ACTIVIDAD DE LECTURA N°2:
+
+
+- El Creation Parameter Method es un patron bueno para ser utilizado cuando
+  estas usando inicializacion de variables explicitas, para asi comunicar la 
+  inicializacion como parte de una instancia de creacion.
+
+
+--------------------------
+
+
+ACTIVIDAD DE LECTURA N°3:
+
+
+- La solucion a esto es no dejar que otros objetos tengan el acceso
+  a sus colecciones. Si se usa indirect access method, hay que asegurarse
+  de que los metodos de obtencion de colecciones sean privados.
+  En su lugar, hay que darle a los clientes o usuarios acceso restringido
+  a operaciones en la coleccion a traves de mensajes que se implementen.
+  La desventaja de este enfoque es que se deben implementar muchos mas metodos.
+  Es posible que como minimo necesite 4 o 5 metodos de acceso protegido 
+  necesario para la coleccion.
+  Sin embargo, a largo plazo, vale la pena, porque su codigo se leera mejor y 
+  sera mas facil de cambiar o corregir.
+
+
+
+---------------------
+
+
+ACTIVIDAD DE LECTURA N° 4:
+
+
+- Son necesarios dos metodos, porque sirven para evitar la confusion entre
+  si el on/off de un booleano es una pregunta de su estado o algo que queremos 
+  que un metodo haga. De esta manera, con dos metodos, podemos tener ambas cosas
+  por ejemplo: un make y un ask method.
+
+
+
+
+
+
+
+
+
+
+
+
