@@ -11,6 +11,14 @@ public abstract class Empleado {
 		private Date fechaNac;
 		private Float sueldoBasico;
 		
+		public Empleado(String nombre, String direccion, String estadoCivil, Date fechaNac, Float sueldoBasico) {
+			this.nombre = nombre;
+			this.direccion = direccion;
+			this.estadoCivil = estadoCivil;
+			this.fechaNac = fechaNac;
+			this.sueldoBasico = sueldoBasico;
+		}
+		
 		public String getNombre() { 
 			return nombre;
 		}
@@ -43,7 +51,14 @@ public abstract class Empleado {
 			return sueldoBasico;
 		}
 		
-		public Float calculoDeSueldoBruto(); //falta codear
-		public Float calculoSueldoNeto();    //falta codear
-		public Float retencionesAplicadas(); //falta codear
+		public abstract Float calculoDeSueldoBruto();
+		
+		public Float calculoSueldoNeto() {
+			
+			return this.calculoDeSueldoBruto() - this.retencionesAplicadas();
+		}
+		
+		public abstract Float retencionesAplicadas();
+		
+		public abstract Float retencionObraSocial();
 }
