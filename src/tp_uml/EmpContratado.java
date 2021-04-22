@@ -28,9 +28,4 @@ public class EmpContratado extends Empleado {
 	public Float retencionObraSocial() {
 		return null;
 	}
-	
-	public int retornoCero() {
-		return 0;
-	}
-
 }
