@@ -30,7 +30,7 @@ public class EmpContratado extends Empleado {
 	}
 	
 	public int retornoCero() {
-		return 1;
+		return 0;
 	}
 
 }
