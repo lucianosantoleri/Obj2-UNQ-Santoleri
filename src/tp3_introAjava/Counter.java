@@ -31,4 +31,8 @@ public class Counter {
 	public int cantidadImpares() {
 		return soloImpares().size();
 	}
+
+	public void addNumber(Double i) {
+		numeros.add(i);
+	}
 }
