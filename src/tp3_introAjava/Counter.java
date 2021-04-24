@@ -35,4 +35,8 @@ public class Counter {
 	public void addNumber(Double i) {
 		numeros.add(i);
 	}
+
+	public Double getEvenOcurrences() {
+		return soloImpares().size(); //duda como resolverlo
+	}
 }

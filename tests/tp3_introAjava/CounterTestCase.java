@@ -1,6 +1,9 @@
 package tp3_introAjava;
 
 import tp3_introAjava.Counter;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,23 +19,23 @@ public class CounterTestCase {
 		contador = new Counter();
 		
 		//se agregan los numeros. Un solo impar y nueve impares
-		contador.add(1);
-		contador.add(3);
-		contador.add(5);
-		contador.add(7);
-		contador.add(9);
-		contador.add(1);
-		contador.add(1);
-		contador.add(1);
-		contador.add(1);
-		contador.add(4);
+		contador.addNumber((double) 1);
+		contador.addNumber((double) 3);
+		contador.addNumber((double) 5);
+		contador.addNumber((double) 7);
+		contador.addNumber((double) 9);
+		contador.addNumber((double) 1);
+		contador.addNumber((double) 1);
+		contador.addNumber((double) 1);
+		contador.addNumber((double) 1);
+		contador.addNumber((double) 4);
 	}
 	
 	@Test
 	public void testEvenNumbers() {
 		// Getting the even occurrences
-		Double amount = counter.getEvenOcurrences();
+		Double amount = contador.getEvenOcurrences();
 		// I check the amount is the expected one
-		assertEquals(amount, 9);
+		assertEquals(amount, 1);
 		}
 }
