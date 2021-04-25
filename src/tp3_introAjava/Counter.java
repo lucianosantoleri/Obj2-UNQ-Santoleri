@@ -6,24 +6,24 @@ import java.util.stream.Collectors;
 
 public class Counter {
 
-	private ArrayList<Double> numeros = new ArrayList<Double>();
+	private ArrayList<Integer> numeros = new ArrayList<Integer>();
 	
 	public static int numero;
 	public static Integer numeroInteger;
 	
-	public Boolean esPar(Double numero) {
-		return (numero%2 == 0);
+	public Boolean esPar(Integer numero2) {
+		return (numero2%2 == 0);
 	}
 	
-	public Boolean esImpar(Double numero) {
-		return (numero%2 != 0);
+	public Boolean esImpar(Integer numero2) {
+		return (numero2%2 != 0);
 	}
 	
-	public List<Double> soloPares() {
+	public List<Integer> soloPares() {
 		return numeros.stream().filter(numero -> esPar(numero)).collect(Collectors.toList());
 	}
 	
-	public List<Double> soloImpares() {
+	public List<Integer> soloImpares() {
 		return numeros.stream().filter(numero -> esImpar(numero)).collect(Collectors.toList());
 	}
 	
@@ -35,7 +35,7 @@ public class Counter {
 		return soloImpares().size();
 	}
 
-	public void addNumber(Double i) {
+	public void addNumber(Integer i) {
 		numeros.add(i);
 	}
 

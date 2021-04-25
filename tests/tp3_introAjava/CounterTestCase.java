@@ -19,16 +19,16 @@ public class CounterTestCase {
 		contador = new Counter();
 		
 		//se agregan los numeros. Un solo impar y nueve impares
-		contador.addNumber((double) 1);
-		contador.addNumber((double) 3);
-		contador.addNumber((double) 5);
-		contador.addNumber((double) 7);
-		contador.addNumber((double) 9);
-		contador.addNumber((double) 1);
-		contador.addNumber((double) 1);
-		contador.addNumber((double) 1);
-		contador.addNumber((double) 1);
-		contador.addNumber((double) 4);
+		contador.addNumber((Integer) 1);
+		contador.addNumber((Integer) 3);
+		contador.addNumber((Integer) 5);
+		contador.addNumber((Integer) 7);
+		contador.addNumber((Integer) 9);
+		contador.addNumber((Integer) 1);
+		contador.addNumber((Integer) 1);
+		contador.addNumber((Integer) 1);
+		contador.addNumber((Integer) 1);
+		contador.addNumber((Integer) 4);
 	}
 	
 	@Test
