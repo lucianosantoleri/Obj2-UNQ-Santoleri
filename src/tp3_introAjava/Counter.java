@@ -8,6 +8,9 @@ public class Counter {
 
 	private ArrayList<Double> numeros = new ArrayList<Double>();
 	
+	public int numero;
+	public Integer numeroInteger;
+	
 	public Boolean esPar(Double numero) {
 		return (numero%2 == 0);
 	}
@@ -37,6 +40,31 @@ public class Counter {
 	}
 
 	public Double getEvenOcurrences() {
-		return soloImpares().size(); //duda como resolverlo
+		return (double) soloImpares().size();
 	}
 }
+
+/* PUNTO 2 - EXAMINAR EXPRESIONES
+ * 
+ * 
+ * s.length -> return 3
+ * t.length -> return null
+ * 1 + a -> error de tipos
+ * a.touppercase -> return "ABC"
+ * "Libertad".indexof.("r") -> return "rtad"
+ * s == a -> return true
+ * 
+ * ----------------------------------------------------------------
+ * 
+ * PUNTO 3 - TIPOS PRIMITIVOS
+ * 
+ * 
+ * 1)- Se llama tipo primitivo o tipo elemental a los tipos de datos originales de un lenguaje de programación, 
+ * esto es, aquellos que nos proporciona el lenguaje y con los que podemos (en ocasiones) construir tipos de 
+ * datos abstractos y estructuras de datos.
+ * 
+ * 2)- La clase Integer envuelve el tipo primitivo int en un objeto. Un objeto de tipo Integer 
+ * contiene un solo campo cuyo valor es de tipo int.
+ * 
+ * 3)- 
+ * */

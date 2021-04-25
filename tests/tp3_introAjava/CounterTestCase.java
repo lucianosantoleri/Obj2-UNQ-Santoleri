@@ -36,6 +36,16 @@ public class CounterTestCase {
 		// Getting the even occurrences
 		Double amount = contador.getEvenOcurrences();
 		// I check the amount is the expected one
-		assertEquals(amount, 1);
+		assertEquals(amount, 9);
 		}
+	
+	@Test
+	public void testeandoCantidadDePares() {
+		assertEquals(contador.cantidadDePares(),1);
+	}
+	
+	@Test
+	public void testeandoCantidadDeImpares() {
+		assertEquals(contador.cantidadImpares(),9);
+	}
 }
