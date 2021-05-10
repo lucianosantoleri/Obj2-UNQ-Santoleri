@@ -14,4 +14,10 @@ public class Mascota implements SerVivo {
 	public String getRaza() {
 		return raza;
 	}
+
+	@Override
+	public String suNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return nombre;
+	}
 }

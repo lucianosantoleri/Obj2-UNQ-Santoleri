@@ -40,4 +40,10 @@ public class Persona implements SerVivo {
 	public Boolean menorQue(Persona nuevaPersona) {
 		return this.edad<nuevaPersona.edad;
 	}
+
+	@Override
+	public String suNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return nombre;
+	}
 }
