@@ -7,6 +7,21 @@ public class Cliente {
 	private Float edad;
 	private String direccion;
 	private Float sueldoNetoMensual;
+	private Propiedad propiedad;
+	
+	public Cliente(String suNombre, String suApellido, Float suEdad, String suDireccion, Float suSueldoNetoMensual,
+			       Propiedad suPropiedad) {
+		this.nombre = suNombre;
+		this.apellido = suApellido;
+		this.edad = suEdad;
+		this.direccion = suDireccion;
+		this.sueldoNetoMensual = suSueldoNetoMensual;
+		this.propiedad = suPropiedad;
+	}
+	
+	public Propiedad getPropiedad() {
+		return this.propiedad;
+	}
 	
 	public Float getEdad() {
 		return edad;
@@ -41,7 +56,7 @@ public class Cliente {
 	}
 	
 	public Float sueldoNetoAnual() {
-		return null; //codificar
+		return sueldoNetoMensual * 12;
 	}
 	
 	public void solicitarCredito(Banco banco) {

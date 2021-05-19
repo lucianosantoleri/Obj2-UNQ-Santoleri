@@ -20,7 +20,7 @@ public class Banco {
 	}
 	
 	public void registrarSolicitudCredito(Solicitud solicitud) {
-		
+		solicitudes.add(solicitud);
 	}
 	
 	public void otorgarCredito(Cliente cliente) {
@@ -28,6 +28,10 @@ public class Banco {
 	}
 	
 	public Float montoTotalSolicitudes() {
-		return null; //codificar
+		return null; 
+	}
+	
+	public Float montoSolicitud() {
+		return null;
 	}
 }
