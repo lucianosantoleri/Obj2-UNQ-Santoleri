@@ -23,7 +23,10 @@ public class PoquerStatusTestCase {
 	@Before
 	public void SetUp() {
 		
+		//sut
 		pokerStatus = new PokerStatus();
+		
+		//doc
 		carta1 = mock(ICarta.class); //"JD"
 		carta2 = mock(ICarta.class); //"10P"
 		carta3 = mock(ICarta.class);//"JP"
@@ -34,7 +37,12 @@ public class PoquerStatusTestCase {
 	
 	@Test
 	public void testeandoRetornoDelEstatusDelPoker() {
-		assertEquals(pokerStatus.verificar(carta1, carta2, carta3, carta4, carta5), true);
+		
+		//exercise
+		Boolean resultado = pokerStatus.verificar(carta1, carta2, carta3, carta4, carta5);
+		
+		//verify
+		assertTrue(resultado);
 	}
 	
 	@Test
