@@ -15,4 +15,7 @@ public class Compuesto implements Parcela {
 	public Trigo trigo() {
 		return (Trigo) objeto;
 	}
+	
+	public int preciosTotal() {
+	}
 }

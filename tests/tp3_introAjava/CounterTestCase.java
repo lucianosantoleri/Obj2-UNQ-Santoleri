@@ -48,4 +48,9 @@ public class CounterTestCase {
 	public void testeandoCantidadDeImpares() {
 		assertEquals(contador.cantidadImpares(),9);
 	}
+	
+	@Test
+	public void testeandoCantidadDeMultiplosDeDos() {
+		assertEquals(contador.cantidadDeMultiplosDe(2), 2);
+	}
 }

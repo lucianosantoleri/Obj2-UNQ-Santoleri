@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+// PUNTO 1 - CONTADOR
+
 public class Counter {
 
 	private ArrayList<Integer> numeros = new ArrayList<Integer>();
@@ -43,8 +46,12 @@ public class Counter {
 		return (double) soloImpares().size();
 	}
 	
-	public static void main(String[] args) {
-	System.out.println (numeroInteger);
+	public int cantidadDeMultiplosDe(int multiplo){
+		int total = 0;
+		for( int i = 0; i < numero; i = i + multiplo ) {
+	        total = total + i;
+		}
+		return total;
 	}
 }
 

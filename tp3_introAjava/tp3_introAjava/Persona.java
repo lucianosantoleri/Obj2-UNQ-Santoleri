@@ -1,8 +1,5 @@
 package tp3_introAjava;
 
-import java.util.*;
-import java.text.SimpleDateFormat;
-
 //Encapsulamiento
 
 public class Persona {
@@ -27,7 +24,11 @@ public class Persona {
 
 	public int getEdad() {
 		return edad;
-	}	
+	}
+	
+	public Boolean menorQue(Persona otraPersona) {
+		return this.edad < otraPersona.getEdad();
+	}
 }
 
 /* 1)- Si un objeto cualquier pide la edad no tiene forma de saber como se calcula porque se respeta el encapsulamiento.

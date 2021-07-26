@@ -4,24 +4,38 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+// PUNTO 4 - MULTIOPERADOR
+
 public class Multioperador {
 
 	
 	private ArrayList<Integer> enteros = new ArrayList<Integer>();
 	
 	public int sumar() {
-		int total = (int) enteros.stream().mapToLong(Integer::longValue).sum();
+		int total = 0;
+		for (int i = 0;i < enteros.size();i++){
+			total = total + i;
+		}
 		return total;
 	}
 	
-	/*public void restar() {
-		enteros.stream().mapToLong(Integer::longValue).distinct();
+	public int restar() {
+		int total = this.sumar();
+		for (int i = 0;0 < enteros.size();i++){
+			total = total - i;
+		}
+		return total;
 	}
 	
-	public void multiplicar() {
-		enteros.stream().mapToLong(Integer::longValue).count();
+	public int multiplicar() {
+		int total = 0;
+		for (int i = 0;i < enteros.size();i++){
+			total = total * i;
+		}
+		return total;
 	}
-	*/
+	
 	public void addNumber(Integer i) {
 		enteros.add(i);
 	}
@@ -54,3 +68,13 @@ public class Multioperador {
 		return (numero2%2 != 0);
 	}
 }
+
+
+/*
+ * PUNTO 5 - SISTEMA DE PAQUETES
+ * 
+ * 1) En mi sistema de archivos, los paquetes estarian organizados en paquete Model, luego en sub-source folder de model.gui y model.stack
+ * 2) La relacion es que los archivos se encuentran en misma ubicacion los de mismo nombre. 
+ *
+ * 
+ * */
