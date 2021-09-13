@@ -1,6 +1,6 @@
 package tp3_introAjava;
 
-//ejercicio 3: hecho
+//ejercicio 3:
 
 public class Multiplo {
 
