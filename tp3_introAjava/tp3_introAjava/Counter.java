@@ -55,7 +55,7 @@ public class Counter {
 	}
 }
 
-/* PUNTO 2 - EXAMINAR EXPRESIONES
+/* PUNTO 5 - EXAMINAR EXPRESIONES
  * 
  * 
  * s.length -> return 3
@@ -67,7 +67,7 @@ public class Counter {
  * 
  * ----------------------------------------------------------------
  * 
- * PUNTO 3 - TIPOS PRIMITIVOS
+ * PUNTO 6 - TIPOS PRIMITIVOS
  * 
  * 
  * 1)- Se llama tipo primitivo o tipo elemental a los tipos de datos originales de un lenguaje de programación, 
