@@ -67,7 +67,7 @@ public class Counter {
  * 
  * ----------------------------------------------------------------
  * 
- * PUNTO 6 - TIPOS PRIMITIVOS
+ * PUNTO 6 - TIPOS PRIMITIVOS//
  * 
  * 
  * 1)- Se llama tipo primitivo o tipo elemental a los tipos de datos originales de un lenguaje de programación, 
