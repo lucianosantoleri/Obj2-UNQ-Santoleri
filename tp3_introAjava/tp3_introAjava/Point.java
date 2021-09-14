@@ -1,5 +1,7 @@
 package tp3_introAjava;
 
+//EJERCICIO 8
+
 public class Point {
 
 	private int X;

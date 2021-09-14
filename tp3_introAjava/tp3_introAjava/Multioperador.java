@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-// PUNTO 4 - MULTIOPERADOR
+// PUNTO 6 - MULTIOPERADOR
 
 public class Multioperador {
 

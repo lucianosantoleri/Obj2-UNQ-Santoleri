@@ -1,6 +1,6 @@
 package tp3_introAjava;
 
-//Encapsulamiento
+//Encapsulamiento 10 y 11
 
 public class Persona {
 
