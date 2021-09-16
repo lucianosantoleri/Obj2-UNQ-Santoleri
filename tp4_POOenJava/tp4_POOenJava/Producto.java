@@ -1,4 +1,4 @@
-package tp4_interfaces;
+package tp4_POOenJava;
 
 public class Producto {
 

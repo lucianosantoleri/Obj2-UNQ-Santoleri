@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="tests"/>
 	<classpathentry kind="src" path="tp_uml"/>
 	<classpathentry kind="src" path="tp3_introAjava"/>
-	<classpathentry kind="src" path="tp4_interfaces"/>
+	<classpathentry kind="src" path="tp4_POOenJava"/>
 	<classpathentry kind="src" path="tp5_SOLID"/>
 	<classpathentry kind="src" path="tp6_Poquer_TDD"/>
 	<classpathentry kind="src" path="tp7_composite"/>

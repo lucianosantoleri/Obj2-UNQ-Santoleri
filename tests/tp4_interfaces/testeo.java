@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import tp4_POOenJava.Caja;
+import tp4_POOenJava.Producto;
+import tp4_POOenJava.ProductoCooperativa;
+
 public class testeo {
 
 private Caja caja;
