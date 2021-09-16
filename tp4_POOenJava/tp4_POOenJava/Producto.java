@@ -2,14 +2,14 @@ package tp4_POOenJava;
 
 public class Producto {
 
-	private float valor;
+	private double valor;
 	private String nombre;
 	
-	public float getValor() {
+	public double getValor() {
 		return valor;
 	}
 
-	public void setValor(float valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 
