@@ -1,4 +1,4 @@
-package tp4_interfaces;
+package tp4_POOenJava;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
