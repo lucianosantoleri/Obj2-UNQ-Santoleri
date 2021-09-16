@@ -1,22 +1,18 @@
 package tp4_POOenJava;
 
-import java.util.function.BooleanSupplier;
-
 public class Producto {
 
 	private double valor;
 	private String nombre;
+	public boolean esPrecioCuidado;
 	
 	public Producto(String nombre, double precio, boolean b) {
 		this.valor = precio;
 		this.nombre = nombre;
+		this.esPrecioCuidado = b;
 	}
 
-	public double getValor() {
-		return valor;
-	}
-
-	public void setValor(double valor) {
+	public void setPrecio(double valor) {
 		this.valor = valor;
 	}
 
@@ -29,13 +25,11 @@ public class Producto {
 	}
 
 	public Double getPrecio() {
-		
-		return null;
+		return valor;
 	}
 
-	public BooleanSupplier esPrecioCuidado() {
-		
-		return null;
+	public boolean esPrecioCuidado() {
+		return false;
 	}
 
 	public void aumentarPrecio(double aumento) {
