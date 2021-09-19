@@ -1,9 +1,12 @@
 package tp4_POOenJava;
 
+import java.util.ArrayList;
+
 public class Supermercado {
 
 	private String nombre;
 	private String direccion;
+	private ArrayList<Producto> productos = new ArrayList<Producto>();
 	
 	public Supermercado(String suNombre, String suDireccion) {
 		this.nombre = suNombre;
@@ -27,17 +30,14 @@ public class Supermercado {
 	}
 
 	public Integer getCantidadDeProductos() {
-		// TODO Auto-generated method stub
-		return null;
+		return productos.size();
 	}
 
-	public void agregarProducto(Producto arroz) {
-		// TODO Auto-generated method stub
-		
+	public void agregarProducto(Producto unProducto) {
+		productos.add(unProducto);
 	}
 
 	public Double getPrecioTotal() {
-		// TODO Auto-generated method stub
-		return null;
+		return productos.stream().mapToDouble(producto->producto.getPrecio()).sum();
 	}
 }
