@@ -28,7 +28,8 @@ public class ProductoPrimeraNecesidad {
 		this.esPrecioCuidado = b;
 	}
 
-	public double precioPrimeraNecesidad() {
-		return this.getPrecio() * 0.9;
+	//aplicando descuento a productos de primera necesidad
+	public double precioPrimeraNecesidad(double descuento) {
+		return (this.getPrecio() * descuento)/100;
 	}
 }
