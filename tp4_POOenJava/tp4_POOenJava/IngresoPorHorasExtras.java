@@ -1,5 +1,7 @@
 package tp4_POOenJava;
 
+//EJERCICiO 3
+
 public class IngresoPorHorasExtras extends Ingreso {
 	
 	public int cantidadHorasExtras;
