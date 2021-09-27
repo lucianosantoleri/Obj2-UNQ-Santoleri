@@ -9,7 +9,7 @@ public class Caja {
 	
 	public Caja(double monto, ArrayList<Producto> stock) {
 		this.montoAPagar = monto;
-		this.stockProductos = stock;
+		Caja.stockProductos = stock;
 	}
 
 	public double getMontoAPagar() {

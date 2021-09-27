@@ -16,7 +16,7 @@ public class Caja {
 	}
 	
 	public void registrarProducto(Producto producto) {
-		montoTotal = montoTotal + producto.getPrecio();
+		montoTotal = (float) (montoTotal + producto.getPrecio());
 		stockProductos.remove(producto);
 	}
 	
