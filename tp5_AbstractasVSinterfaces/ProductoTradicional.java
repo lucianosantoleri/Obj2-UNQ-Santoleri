@@ -5,5 +5,4 @@ public class ProductoTradicional extends Producto {
 	public void aumentarPrecio(double aumento) {
 		this.valor = valor + aumento;
 	}
-
 }
