@@ -1,5 +1,7 @@
 package tp3_introAjava;
 
+import org.junit.jupiter.api.Test;
+
 import tp3_introAjava.Counter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

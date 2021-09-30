@@ -1,14 +1,11 @@
 package tp6_TDD;
 
-import tp6_Poquer_TDD.ICarta;
-import tp6_Poquer_TDD.PokerStatus;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
-import org.mockito.Mock;
 
-import static org.mockito.Mockito.*;
+import tp6_Poquer_TDD.ICarta;
+import tp6_Poquer_TDD.PokerStatus;
 
 
 public class PoquerStatusTestCase {
