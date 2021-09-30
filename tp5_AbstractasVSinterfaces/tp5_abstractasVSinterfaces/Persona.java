@@ -1,4 +1,4 @@
-
+package tp5_abstractasVSinterfaces;
 public class Persona extends SerVivo {
 
 		private String apellido;

@@ -1,3 +1,4 @@
+package tp5_abstractasVSinterfaces;
 import java.util.ArrayList;
 
 public class Main {
@@ -21,17 +22,13 @@ public class Main {
 		seresVivos.add(ser);
 	}
 	
-	public ArrayList<String> nombres() {
-		return seresVivos.stream().filter(n -> n.nombre).toString();
-	}
-	
 	public static void main(String[] args){
 	    
 		seresVivos.add(pers1);
 		seresVivos.add(mascota1);
 		seresVivos.add(mascota2);
 		seresVivos.add(pers2);
-		
-		System.out.println();
+	
+		seresVivos.stream().forEach(s -> System.out.println("Hola " + s.nombre));
 	}
 }

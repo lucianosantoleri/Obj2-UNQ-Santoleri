@@ -1,4 +1,4 @@
-
+package tp5_abstractasVSinterfaces;
 public class Mascota extends SerVivo {
 
 	private String raza;
