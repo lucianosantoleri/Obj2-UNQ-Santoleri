@@ -1,4 +1,5 @@
 
-public class Factura {
-
+public abstract class Factura {
+	
+	public abstract double montoAPagar();
 }

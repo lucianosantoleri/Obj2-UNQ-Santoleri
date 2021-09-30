@@ -6,6 +6,7 @@ public class Caja {
 
 	private double montoAPagar;
 	private static ArrayList<Producto> stockProductos = new ArrayList<Producto>();
+	protected Factura factura;
 	
 	public Caja(double monto, ArrayList<Producto> stock) {
 		this.montoAPagar = monto;
@@ -37,5 +38,9 @@ public class Caja {
 	
 	public static Boolean existeProducto(Producto producto) {
 		return stockProductos.contains(producto);
+	}
+	
+	public void registrarPago(Agencia agencia) {
+		agencia.registrarPago(factura);
 	}
 }
