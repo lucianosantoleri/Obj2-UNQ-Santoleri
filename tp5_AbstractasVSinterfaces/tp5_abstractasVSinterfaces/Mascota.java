@@ -9,7 +9,7 @@ public class Mascota extends SerVivo {
 	}
 	
 	public String getNombre() {
-		return nombre;
+		return super.nombre;
 	}
 	
 	public String getRaza() {
