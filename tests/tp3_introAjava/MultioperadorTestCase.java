@@ -50,6 +50,6 @@ private Multioperador operador;
 	
 	@Test
 	public void testeandoOperaciones() {
-		assertEquals(operador.sumar(),33);
+		assertEquals(operador.sumar(),45);
 	}
 }
