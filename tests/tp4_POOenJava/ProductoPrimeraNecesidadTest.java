@@ -14,6 +14,7 @@ public class ProductoPrimeraNecesidadTest {
 		producto = new ProductoPrimeraNecesidad("Leche", 8d, false);
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalcularPrecio() {
 		assertEquals(new Double(7.2), producto.getPrecio());
