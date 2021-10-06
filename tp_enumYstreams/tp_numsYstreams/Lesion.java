@@ -24,4 +24,20 @@ public enum Lesion {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
+	public Lesion siguienteDeRojo() {
+		return Lesion.GRIS;
+	}
+	
+	public Lesion siguienteDeGris() {
+		return Lesion.AMARILLO;
+	}
+	
+	public Lesion siguienteDeAmarillo() {
+		return Lesion.MIEL;
+	}
+	
+	public Lesion siguienteDeMiel() {
+		return Lesion.ROJO;
+	}
 }
