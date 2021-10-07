@@ -9,7 +9,7 @@
 	<classpathentry kind="src" path="tp6_Poquer_TDD"/>
 	<classpathentry kind="src" path="tp7_composite"/>
 	<classpathentry kind="src" path="tp5_AbstractasVSinterfaces"/>
-	<classpathentry kind="src" path="tp_enumYstreams"/>
+	<classpathentry kind="src" path="tp6_enumYstreams"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
