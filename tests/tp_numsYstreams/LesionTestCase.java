@@ -7,17 +7,27 @@ import org.junit.jupiter.api.Test;
 
 public class LesionTestCase {
 
-	public Lesion ROJO;
-	private Lesion GRIS;
-	private Lesion AMARILLO;
-	private Lesion MIEL;
+	private Lesion rojo;
+	private Lesion gris;
+	private Lesion amarillo;
+	private Lesion miel;
+	
+	private rojo = new Lesion.ROJO();
+	private gris = new Lesion.GRIS();
+	private amarillo = new Lesion.AMARILLO();
+	private miel = new Lesion.MIEL();
+	
 	
 	@BeforeEach
 	public void setUp() {
-		ROJO.setNivelRiesgo(20);
-		GRIS.setNivelRiesgo(15);
-		AMARILLO.setNivelRiesgo(10);
-		MIEL.setNivelRiesgo(5);
+		rojo.setNivelRiesgo(20);
+		gris.setNivelRiesgo(15);
+		amarillo.setNivelRiesgo(10);
+		miel.setNivelRiesgo(5);
+		rojo.setDescripcion("Maximo riesgo");
+		gris.setDescripcion("Riesgo avanzado");
+		amarillo.setDescripcion("Riesgo medio");
+		miel.setDescripcion("apenas riesgoso");
 	}
  	
 	@Test

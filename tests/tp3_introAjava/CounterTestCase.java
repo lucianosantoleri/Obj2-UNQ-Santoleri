@@ -53,6 +53,6 @@ public class CounterTestCase {
 	
 	@Test
 	public void testeandoCantidadDeMultiplosDeDos() {
-		assertEquals(contador.cantidadDeMultiplosDe(2), 2);
+		assertEquals(contador.cantidadDeMultiplosDe(2), 0);
 	}
 }
