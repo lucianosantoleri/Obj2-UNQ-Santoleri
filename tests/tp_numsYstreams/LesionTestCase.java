@@ -12,10 +12,10 @@ public class LesionTestCase {
 	private Lesion amarillo;
 	private Lesion miel;
 	
-	private rojo = new Lesion.ROJO();
+	/*private rojo = new Lesion.ROJO();
 	private gris = new Lesion.GRIS();
 	private amarillo = new Lesion.AMARILLO();
-	private miel = new Lesion.MIEL();
+	private miel = new Lesion.MIEL();*/
 	
 	
 	@BeforeEach
@@ -32,21 +32,21 @@ public class LesionTestCase {
  	
 	@Test
 	public void testNivelRiesgoDeRojo() {
-		assertEquals(ROJO.getNivelRiesgo(),20);
+		assertEquals(rojo.getNivelRiesgo(),20);
 	}
 	
 	@Test
 	public void testNivelRiesgoGris() {
-		assertEquals(GRIS.getNivelRiesgo(),15);
+		assertEquals(gris.getNivelRiesgo(),15);
 	}
 	
 	@Test
 	public void testNivelRiesgoAmarillo() {
-		assertEquals(AMARILLO.getNivelRiesgo(),10);
+		assertEquals(amarillo.getNivelRiesgo(),10);
 	}
 	
 	@Test
 	public void testNivelRiesgoMiel() {
-		assertEquals(MIEL.getNivelRiesgo(),5);
+		assertEquals(miel.getNivelRiesgo(),5);
 	}
 }
