@@ -4,8 +4,8 @@ public enum Lesion {
 	
 	ROJO(20,"Maximo riesgo"),GRIS(15,"Riesgo avanzado"),AMARILLO(10,"Riesgo medio"),MIEL(5, "apenas riesgoso");
 	
-	private int nivelRiesgo;
-	private String descripcion;
+	int nivelRiesgo;
+	String descripcion;
 	
 	Lesion(int riesgo, String desc) {
 		this.nivelRiesgo = riesgo;

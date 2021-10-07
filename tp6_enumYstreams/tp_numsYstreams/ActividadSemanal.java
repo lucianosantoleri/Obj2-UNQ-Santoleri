@@ -5,7 +5,7 @@ public class ActividadSemanal {
 	private DIA diaDeLaSemana;
 	private int horaInicio;
 	private int duracion;
-	private String deporte;
+	private DEPORTE deporte;
 	
 	public DIA getDiaDeLaSemana() {
 		return diaDeLaSemana;
@@ -25,10 +25,11 @@ public class ActividadSemanal {
 	public void setDuracion(int duracion) {
 		this.duracion = duracion;
 	}
-	public String getDeporte() {
+	public DEPORTE getDeporte() {
 		return deporte;
 	}
-	public void setDeporte(String deporte) {
-		this.deporte = deporte;
+	
+	public int costoDeActividad() {
+		return 0;
 	}
-}
+ }
