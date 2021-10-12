@@ -30,6 +30,25 @@ public class ActividadSemanal {
 	}
 	
 	public int costoDeActividad() {
-		return 0;
+		
+		int costo = 0;
+		
+		switch(diaDeLaSemana) {
+			case LUNES:
+				costo = 500;
+			case MARTES:
+				costo = 500;
+			case MIERCOLES:
+				costo = 500;
+			case JUEVES:
+				costo = 1000;
+			case VIERNES:
+				costo = 1000;
+			case SABADO:
+				costo = 1000;
+			case DOMINGO:
+				costo = 1000;
+		}
+		return costo;
 	}
  }
