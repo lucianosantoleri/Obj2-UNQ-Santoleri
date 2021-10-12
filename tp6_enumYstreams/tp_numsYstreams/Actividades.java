@@ -31,8 +31,10 @@ public class Actividades {
 		return actividades.stream().mapToInt(act -> act.getDuracion()).sum();
 	}
 	
-	//se sabe de antemano que la actividad es un deporte
-	public ActividadSemanal laDeMenorCostoPara(ActividadSemanal acti) {
-		return actividades.stream().filter(act -> act == acti).min(Comparator.comparing(acti.getCosto()));
+	public ActividadSemanal laDeMenorCostoPara(ActividadSemanal depo) {
+		List<ActividadSemanal> actis = actividades.stream().
+												  filter(act -> act == depo).collect(Collectors.toList());
+		int costo = depo.getCosto();
+		return actis.stream().min(Comparator.comparing(ActividadSemanal::costo)).get();
 	}
 }
