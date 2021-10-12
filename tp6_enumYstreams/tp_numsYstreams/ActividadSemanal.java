@@ -6,6 +6,19 @@ public class ActividadSemanal {
 	private int horaInicio;
 	private int duracion;
 	private DEPORTE deporte;
+	private int costo;
+	
+	public ActividadSemanal(DIA dia, int horaIni, int dura, DEPORTE depo, int valor) {
+		this.diaDeLaSemana = dia;
+		this.horaInicio = horaIni;
+		this.duracion = dura;
+		this.deporte = depo;
+		this.costo = valor;
+	}
+	
+	public int getCosto() {
+		return costo;
+	}
 	
 	public DIA getDiaDeLaSemana() {
 		return diaDeLaSemana;
@@ -30,8 +43,6 @@ public class ActividadSemanal {
 	}
 	
 	public int costoDeActividad() {
-		
-		int costo = 0;
 		
 		switch(diaDeLaSemana) {
 			case LUNES:
