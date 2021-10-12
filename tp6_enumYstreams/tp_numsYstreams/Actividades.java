@@ -20,4 +20,8 @@ public class Actividades {
 		
 		return actividades.stream().filter(act -> act.getDeporte() == DEPORTE.FUTBOL).collect(Collectors.toList());
 	}
+	
+	public List<ActividadSemanal> actividadesDeComplejidad(String comple) {
+		return actividades.stream().filter(act -> act.getDeporte().complejidad == comple).collect(Collectors.toList());
+	}
 }

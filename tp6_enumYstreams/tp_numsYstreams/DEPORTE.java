@@ -4,9 +4,9 @@ public enum DEPORTE {
 
 	RUNNING("complejidad 1"),FUTBOL("complejidad 2"),BASKET("complejidad 3"),TENNIS("complejidad 4"),JABALINA("complejidad 5");
 	
-	String descripcion;
+	String complejidad;
 	
-	DEPORTE(String desc) {
-		this.descripcion = desc;
+	DEPORTE(String compl) {
+		this.complejidad = compl;
 	}
 }
