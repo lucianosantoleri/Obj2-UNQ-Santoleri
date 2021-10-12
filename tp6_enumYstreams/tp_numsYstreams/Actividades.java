@@ -1,6 +1,7 @@
 package tp_numsYstreams;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.*;
 
 public class Actividades {
@@ -15,8 +16,8 @@ public class Actividades {
 		return actividades;
 	}
 	
-	public ArrayList<ActividadSemanal> actividadesDeFutbol() {
+	public List<ActividadSemanal> actividadesDeFutbol() {
 		
-		return actividades.stream().filter(act -> act.getDeporte() == DEPORTE.FUTBOL);
+		return actividades.stream().filter(act -> act.getDeporte() == DEPORTE.FUTBOL).collect(Collectors.toList());
 	}
 }
