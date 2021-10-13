@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.BinaryOperator;
 import java.util.stream.*;
 
 public class Actividades {
@@ -37,4 +39,9 @@ public class Actividades {
 		
 		return actis.stream().min(Comparator.comparing(ActividadSemanal::getCosto)).get();
 	}
+	
+	/* DUDA
+	public Map<DEPORTE,ActividadSemanal> laActividadMasEconomica() {
+		return actividades.stream().map(Collectors.reducing(BinaryOperator.minBy(Comparator.comparing(ActividadSemanal::getCosto))));
+	}*/
 }
