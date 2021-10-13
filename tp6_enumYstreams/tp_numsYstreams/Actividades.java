@@ -3,8 +3,10 @@ package tp_numsYstreams;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.BinaryOperator;
 import java.util.stream.*;
 
@@ -40,8 +42,21 @@ public class Actividades {
 		return actis.stream().min(Comparator.comparing(ActividadSemanal::getCosto)).get();
 	}
 	
-	/* DUDA
-	public Map<DEPORTE,ActividadSemanal> laActividadMasEconomica() {
-		return actividades.stream().map(Collectors.reducing(BinaryOperator.minBy(Comparator.comparing(ActividadSemanal::getCosto))));
-	}*/
+	public Map<DEPORTE,ActividadSemanal> laActividadMasEconomica(){
+        //Lista con Opcional
+        Map<DEPORTE,Optional<ActividadSemanal>> loQueTenemos =
+        this.actividades.stream()
+                .collect(Collectors.groupingBy(ActividadSemanal::getDeporte
+                        ,(Collectors.minBy(Comparator.comparing(ActividadSemanal::getCosto)))));
+        //Creamos una lista sin Opcional
+        Map <DEPORTE,ActividadSemanal> loQueQueremos = new HashMap<DEPORTE,ActividadSemanal>();
+        //Recorremos el map de Opcional y guadamos los datos en el map loQueQueremos la actividadSemanal sin Opcional
+        loQueTenemos.forEach((deporte, actividadSemanal) -> loQueQueremos.put(deporte,actividadSemanal.get()));
+        
+        return loQueQueremos;
+    }
+	
+	public void imprimirActividades() {
+		
+	}
 }
