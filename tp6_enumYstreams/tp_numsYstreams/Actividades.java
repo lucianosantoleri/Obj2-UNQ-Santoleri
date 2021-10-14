@@ -1,6 +1,7 @@
 package tp_numsYstreams;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -57,6 +58,9 @@ public class Actividades {
     }
 	
 	public void imprimirActividades() {
+		List<ActividadSemanal> actis = actividades.stream().
+				  filter(act -> act.getDeporte()).collect(Collectors.toList());
 		
+		System.out.println(Arrays.toString(actis));
 	}
 }
