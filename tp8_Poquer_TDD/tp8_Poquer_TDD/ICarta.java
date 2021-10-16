@@ -1,4 +1,4 @@
-package tp6_Poquer_TDD;
+package tp8_Poquer_TDD;
 
 public interface ICarta {
 

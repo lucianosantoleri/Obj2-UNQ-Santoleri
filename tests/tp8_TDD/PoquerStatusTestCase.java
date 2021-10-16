@@ -4,8 +4,8 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import tp6_Poquer_TDD.ICarta;
-import tp6_Poquer_TDD.PokerStatus;
+import tp8_Poquer_TDD.ICarta;
+import tp8_Poquer_TDD.PokerStatus;
 
 
 public class PoquerStatusTestCase {

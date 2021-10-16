@@ -6,10 +6,10 @@ import static org.mockito.Mockito.mock;
 import org.junit.Before;
 import org.junit.Test;
 
-import tp6_Poquer_TDD.ICarta;
-import tp6_Poquer_TDD.PokerStatus;
 import tp7_composite.Compuesto;
 import tp7_composite.Parcela;
+import tp8_Poquer_TDD.ICarta;
+import tp8_Poquer_TDD.PokerStatus;
 
 public class ParcelaTestCase {
 
