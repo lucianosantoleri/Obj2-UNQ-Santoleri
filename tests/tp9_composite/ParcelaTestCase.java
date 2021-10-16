@@ -1,4 +1,4 @@
-package tp7_composite;
+package tp9_composite;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
@@ -8,6 +8,8 @@ import org.junit.Test;
 
 import tp6_Poquer_TDD.ICarta;
 import tp6_Poquer_TDD.PokerStatus;
+import tp7_composite.Compuesto;
+import tp7_composite.Parcela;
 
 public class ParcelaTestCase {
 
