@@ -1,4 +1,4 @@
-package tp7_composite;
+package tp9_composite;
 
 public class Trigo {
 
