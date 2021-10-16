@@ -57,11 +57,12 @@ public class Actividades {
         return loQueQueremos;
     }
 	
+	/*
 	public void imprimirActividades() {
 		List<ActividadSemanal> actis = actividades.stream().
 				  filter(act -> act.getDeporte()).collect(Collectors.toList());
 		
 		System.out.println(Arrays.toString(actis));
 	}
-	
+	*/
 }
