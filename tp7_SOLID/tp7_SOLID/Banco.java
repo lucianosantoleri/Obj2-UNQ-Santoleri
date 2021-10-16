@@ -1,4 +1,4 @@
-package tp5_SOLID;
+package tp7_SOLID;
 
 import java.util.ArrayList;
 
