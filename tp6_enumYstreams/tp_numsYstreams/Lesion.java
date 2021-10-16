@@ -2,7 +2,8 @@ package tp_numsYstreams;
 
 public enum Lesion {
 	
-	ROJO(20,"Maximo riesgo"),GRIS(15,"Riesgo avanzado"),AMARILLO(10,"Riesgo medio"),MIEL(5, "apenas riesgoso");
+	ROJO(20,"Maximo riesgo"),GRIS(15,"Riesgo avanzado"),
+	AMARILLO(10,"Riesgo medio"),MIEL(5, "apenas riesgoso");
 	
 	int nivelRiesgo;
 	String descripcion;
