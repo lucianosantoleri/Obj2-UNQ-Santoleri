@@ -1,4 +1,4 @@
-package tp8_Poquer_TDD;
+package tp8_TestDoublesyTDD;
 
 public interface ICarta {
 
