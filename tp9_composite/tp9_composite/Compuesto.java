@@ -19,4 +19,8 @@ public class Compuesto implements Parcela {
 	public int preciosTotal() {
 		return 0;
 	}
+
+	public Boolean verificarCompuesto() {
+		return null;
+	}
 }
