@@ -1,14 +1,15 @@
 package tp9_composite;
 
-public class Compuesto implements Parcela {
+public abstract class Compuesto implements Parcela {
 
 	private Parcela objeto;
+	int precio;
 	
 	public Parcela composicion() {
 		return objeto;
 	}
 	
-	public Soja hoja() {
+	public Soja soja() {
 		return (Soja) objeto;
 	}
 	
@@ -17,10 +18,12 @@ public class Compuesto implements Parcela {
 	}
 	
 	public int preciosTotal() {
-		return 0;
+		return objeto.getPrecio();
 	}
 
 	public Boolean verificarCompuesto() {
 		return null;
 	}
+	
+	public abstract int getPrecio();
 }

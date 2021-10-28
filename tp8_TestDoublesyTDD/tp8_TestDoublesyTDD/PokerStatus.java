@@ -16,12 +16,8 @@ public class PokerStatus {
 		cartas.add(carta4);
 		cartas.add(carta5);
 		
-		boolean contains = ((ArrayList<ICarta>) cartas.stream()).contains(!extracted(carta1, carta2));
+		boolean contains = ((ArrayList<ICarta>) cartas.stream()).contains(!this.compararCartas(carta1, carta2));
 		return contains;
-	}
-
-	private Boolean extracted(ICarta carta1, ICarta carta2) {
-		return compararCartas(carta1,carta2);
 	}
 	
 	public ArrayList<ICarta> getCartas() {

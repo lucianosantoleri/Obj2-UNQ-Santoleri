@@ -1,14 +1,12 @@
 package tp9_composite;
 
-public class Soja {
-
-	private int precio;
+public class Soja extends Compuesto{
 
 	public int getPrecio() {
-		return precio;
+		return super.precio;
 	}
 
 	public void setPrecio(int precio) {
-		this.precio = precio;
+		super.precio = precio;
 	}
 }

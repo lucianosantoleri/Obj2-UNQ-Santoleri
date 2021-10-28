@@ -1,14 +1,12 @@
 package tp9_composite;
 
-public class Trigo {
-
-	private int precio;
+public class Trigo extends Compuesto{
 
 	public int getPrecio() {
-		return precio;
+		return super.precio;
 	}
 
 	public void setPrecio(int precio) {
-		this.precio = precio;
+		super.precio = precio;
 	}
 }
