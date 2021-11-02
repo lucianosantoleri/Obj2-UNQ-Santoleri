@@ -10,7 +10,6 @@ import org.junit.Test;
 import tp8_TestDoublesyTDD.ICarta;
 import tp8_TestDoublesyTDD.PokerStatus;
 
-
 public class PoquerStatusTestCase {
 
 	private PokerStatus pokerStatus;
