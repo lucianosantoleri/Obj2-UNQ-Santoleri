@@ -4,4 +4,5 @@ public interface Parcela {
 	
 	public Parcela composicion();
 	public int getPrecio();
+	public Boolean verificarCompuesto();
 }

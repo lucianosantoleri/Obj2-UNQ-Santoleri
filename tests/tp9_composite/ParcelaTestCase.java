@@ -24,7 +24,7 @@ public class ParcelaTestCase {
 		public void SetUp() {
 			
 			//sut
-			parcela = new Compuesto();
+			parcela = new Soja();
 			
 			//doc
 			compuesto1 = mock(Parcela.class); //"JD"
