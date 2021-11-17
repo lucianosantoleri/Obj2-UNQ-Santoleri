@@ -1,5 +1,6 @@
 package tp9_composite;
 
-public class Ejercito {
+public abstract class Ejercito implements IEejercito {
 
+	
 }
