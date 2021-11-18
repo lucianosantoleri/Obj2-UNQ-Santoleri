@@ -4,17 +4,23 @@ import java.util.ArrayList;
 
 public class Ingeniero extends Ejercito{
 
+	private int lajas;
+	
 	public Ingeniero(ArrayList<Ejercito> ejer, int desti) {
 		super(ejer, desti);
 		ejer.add(this);
 	}
-
-	private int lajas;
 	
 	@Override
 	public void caminar() {
-		
+		this.descontarHaciaElDestino();
 		this.descontarLaja();
+	}
+
+	private void descontarHaciaElDestino() {
+		if(super.destino > 0) {
+			super.destino = super.destino - 1;
+		}
 	}
 
 	public int getLajas() {

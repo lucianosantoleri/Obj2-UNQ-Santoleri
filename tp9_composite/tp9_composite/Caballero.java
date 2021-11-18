@@ -15,5 +15,11 @@ public class Caballero extends Ejercito{
 	}
 
 	private void enZigzag() {
+		if(super.destino > 1) {
+			super.destino = super.destino - 2;
+		}
+		else {
+			super.destino = super.destino - 1;
+		}
 	}
 }
