@@ -1,6 +1,20 @@
 package tp9_composite;
 
-public abstract class Ejercito implements IEejercito {
+import java.util.*;
 
-	public abstract void caminar(Punto a, Punto b);
+public abstract class Ejercito implements IEejercito {
+	
+	protected ArrayList<Ejercito> ejercito = new ArrayList<Ejercito>();
+	protected int destino;
+	
+	public Ejercito(ArrayList<Ejercito> ejer, int desti) {
+		this.ejercito = ejer;
+		this.destino = desti;
+	}
+
+	public void aniadirAlEjercito(Ejercito miembro) {
+		ejercito.add(miembro);
+	}
+	
+	public abstract void caminar();
 }

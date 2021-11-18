@@ -1,11 +1,18 @@
 package tp9_composite;
 
+import java.util.ArrayList;
+
 public class Ingeniero extends Ejercito{
+
+	public Ingeniero(ArrayList<Ejercito> ejer, int desti) {
+		super(ejer, desti);
+		ejer.add(this);
+	}
 
 	private int lajas;
 	
 	@Override
-	public void caminar(Punto a, Punto b) {
+	public void caminar() {
 		
 		this.descontarLaja();
 	}
