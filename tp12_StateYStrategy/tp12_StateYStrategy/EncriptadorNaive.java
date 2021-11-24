@@ -1,13 +1,9 @@
 package tp12_StateYStrategy;
 
-public class EncriptadorNaive {
+public abstract class EncriptadorNaive {
 
 	
-	public void encriptar() {
-		
-	}
+	public abstract String encriptar(String texto);
 	
-	public void desencriptar() {
-		
-	}
+	public abstract String desencriptar(String texto);
 }
