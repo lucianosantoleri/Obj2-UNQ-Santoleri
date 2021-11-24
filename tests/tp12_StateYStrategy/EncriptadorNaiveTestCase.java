@@ -21,6 +21,8 @@ public class EncriptadorNaiveTestCase {
 	@Test
 	public void testEncriptandoConVocales() {
 		
-		assertEquals(encriptador.encriptar(texto), "hule");
+		texto = encriptador.encriptar(texto);
+		
+		assertEquals(texto, "hule");
 	}
 }

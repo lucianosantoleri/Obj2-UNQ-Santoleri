@@ -28,8 +28,7 @@ public class EncriptadorCambioVocal extends EncriptadorNaive {
 		if (vocales.contains(letra)) {
 			return true;
 		}
-		else {return false;
-		}
+		return false;
 	}
 	
 	public String cambiarASiguienteSiEsVocal(String letra) {
