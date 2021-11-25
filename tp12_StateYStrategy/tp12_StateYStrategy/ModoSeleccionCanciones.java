@@ -2,32 +2,48 @@ package tp12_StateYStrategy;
 
 public class ModoSeleccionCanciones extends Song {
 
+	private Boolean reproduciendo = false;
+	
 	public ModoSeleccionCanciones(String cancion) {
 		super(cancion);
 	}
 
 	@Override
 	public void play() {
-		// TODO Auto-generated method stub
-		
+		this.setReproduciendo(true);
 	}
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
-		
+		this.setReproduciendo(false);
 	}
 
 	@Override
 	public void stop() {
-		// TODO Auto-generated method stub
-		
+		this.pause();
+		this.cambiarModo();
+	}
+
+	public Boolean getReproduciendo() {
+		return reproduciendo;
+	}
+
+	public void setReproduciendo(Boolean reproduciendo) {
+		this.reproduciendo = reproduciendo;
 	}
 
 	@Override
 	public Song modo() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this;
 	}
-
+	
+	public Song cambiarModo() {
+		Song modoSeleccion = new ModoInicio(cancion);
+		if(super.modo.equals(modoSeleccion)) 
+		{
+			super.modo = this;
+		}
+		return this;
+	}
 }
