@@ -18,15 +18,12 @@ public class ModoSeleccionCanciones extends Song {
 		if(this.getReproduciendo() == true) {
 		this.setReproduciendo(false);
 		}
-		else {
-			
-		}
 	}
 
 	@Override
 	public void stop() {
 		this.pause();
-		this.cambiarAModoSeleccion();
+		super.cambiarAModoSeleccion();
 	}
 
 	public Boolean getReproduciendo() {

@@ -17,20 +17,17 @@ public class ModoInicio extends Song {
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
-		
+		this.retornarError();
 	}
 
 	@Override
 	public void stop() {
-		// TODO Auto-generated method stub
-		
+		this.retornarError();
 	}
 
 	@Override
 	public Song modo() {
-		// TODO Auto-generated method stub
-		return null;
+		return this;
 	}
 
 }
