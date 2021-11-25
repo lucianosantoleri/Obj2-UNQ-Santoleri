@@ -4,6 +4,7 @@ public abstract class Song implements IReproductorMP3{
 
 	protected String cancion;
 	protected Song modo;
+	private Boolean reproduciendo = false;
 	
 	public Song(String cancion) {
 		this.cancion = cancion;
@@ -19,7 +20,10 @@ public abstract class Song implements IReproductorMP3{
 	public abstract void stop();
 	
 	@Override
-	public abstract Song modo();
+	public Song modo() {
+		return modo;
+	}
+
 	
 	public Song cambiarAModoSeleccion() {
 		Song modoInicio = new ModoInicio(cancion);
@@ -39,5 +43,13 @@ public abstract class Song implements IReproductorMP3{
 			modo = modoInicio;
 		}
 		return modo;
+	}
+	
+	public Boolean getReproduciendo() {
+		return reproduciendo;
+	}
+	
+	public void setReproduciendo(Boolean reproduciendo) {
+		this.reproduciendo = reproduciendo;
 	}
 }

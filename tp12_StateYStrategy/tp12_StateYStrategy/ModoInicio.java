@@ -24,10 +24,4 @@ public class ModoInicio extends Song {
 	public void stop() {
 		this.retornarError();
 	}
-
-	@Override
-	public Song modo() {
-		return this;
-	}
-
 }
