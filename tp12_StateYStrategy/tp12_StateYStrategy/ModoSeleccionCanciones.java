@@ -15,13 +15,18 @@ public class ModoSeleccionCanciones extends Song {
 
 	@Override
 	public void pause() {
+		if(this.getReproduciendo() == true) {
 		this.setReproduciendo(false);
+		}
+		else {
+			
+		}
 	}
 
 	@Override
 	public void stop() {
 		this.pause();
-		this.cambiarModo();
+		this.cambiarAModoSeleccion();
 	}
 
 	public Boolean getReproduciendo() {
@@ -35,15 +40,6 @@ public class ModoSeleccionCanciones extends Song {
 	@Override
 	public Song modo() {
 		
-		return this;
-	}
-	
-	public Song cambiarModo() {
-		Song modoSeleccion = new ModoInicio(cancion);
-		if(super.modo.equals(modoSeleccion)) 
-		{
-			super.modo = this;
-		}
 		return this;
 	}
 }

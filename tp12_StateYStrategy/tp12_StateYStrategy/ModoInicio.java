@@ -8,8 +8,11 @@ public class ModoInicio extends Song {
 
 	@Override
 	public void play() {
-		// TODO Auto-generated method stub
-		
+		this.retornarError();
+	}
+
+	private String retornarError() {
+		return "Error: No se encuentra la cancion " + cancion;
 	}
 
 	@Override

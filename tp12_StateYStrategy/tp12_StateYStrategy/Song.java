@@ -20,4 +20,24 @@ public abstract class Song implements IReproductorMP3{
 	
 	@Override
 	public abstract Song modo();
+	
+	public Song cambiarAModoSeleccion() {
+		Song modoInicio = new ModoInicio(cancion);
+		Song modoSeleccion = new ModoSeleccionCanciones(cancion);
+		if(modo.equals(modoInicio)) 
+		{
+			modo = modoSeleccion;
+		}
+		return modo;
+	}
+	
+	public Song cambiarAModoInicio() {
+		Song modoInicio = new ModoInicio(cancion);
+		Song modoSeleccion = new ModoSeleccionCanciones(cancion);
+		if(modo.equals(modoSeleccion)) 
+		{
+			modo = modoInicio;
+		}
+		return modo;
+	}
 }
