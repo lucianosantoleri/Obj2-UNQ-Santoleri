@@ -1,0 +1,7 @@
+EJERCICIO 4:
+
+- El Template Method en este ejercicio se muestra claramente en los metodos: esHoraPico() y costoNeto().
+- A su vez, las operaciones primitivas se pueden ver en los getters y setters, y ademas, en el metodo sobreescrito de esHoraPico()
+que simplemente retorna un booleano.
+- las operaciones concretas se pueden identificar en la operacion del metodo costoFinal(), por ejemplo.
+- el hook method no se logra indetificarse en el ejercicio.
