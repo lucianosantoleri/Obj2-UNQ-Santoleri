@@ -8,6 +8,12 @@ public class WikipediaPage implements IWikipediaPage {
 	private String tituloPagina;
 	private String link;
 	private String infobox;
+	
+	public WikipediaPage(String title, String link, String info) {
+		this.tituloPagina = title;
+		this.link = link;
+		this.infobox = info;
+	}
 
 	@Override
 	public String getTitle() {

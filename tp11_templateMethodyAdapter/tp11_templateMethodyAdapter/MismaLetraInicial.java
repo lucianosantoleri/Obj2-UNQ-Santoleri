@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class MismaLetraInicial extends Filtro {
+	
+	public MismaLetraInicial() {
+		
+	}
 
 	@Override
 	public List<WikipediaPage> getSimilarPages(WikipediaPage page, List<WikipediaPage> wikipedia) {

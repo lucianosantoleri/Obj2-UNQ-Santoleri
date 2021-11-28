@@ -5,6 +5,10 @@ import java.util.stream.Collectors;
 
 public class PropiedadEnComun extends Filtro{
 
+	public PropiedadEnComun() {
+		
+	}
+
 	@Override
 	public List<WikipediaPage> getSimilarPages(WikipediaPage page, List<WikipediaPage> wikipedia) {
 		return wikipedia.stream().filter(pagina -> this.mismoInfobox(page, pagina)).collect(Collectors.toList());

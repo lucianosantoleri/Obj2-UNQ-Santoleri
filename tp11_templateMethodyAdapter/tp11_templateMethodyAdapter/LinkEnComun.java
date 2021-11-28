@@ -5,6 +5,10 @@ import java.util.stream.Collectors;
 
 public class LinkEnComun extends Filtro{
 
+	public LinkEnComun() {
+		
+	}
+
 	@Override
 	public List<WikipediaPage> getSimilarPages(WikipediaPage page, List<WikipediaPage> wikipedia) {
 		return wikipedia.stream().filter(pagina -> this.mismoLink(page, pagina)).collect(Collectors.toList());
