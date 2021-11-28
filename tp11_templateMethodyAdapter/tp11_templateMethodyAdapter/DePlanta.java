@@ -2,6 +2,11 @@ package tp11_templateMethodyAdapter;
 
 public class DePlanta extends Empleado {
 
+	public DePlanta(int horas, int hijos) {
+		super.hijos = hijos;
+		super.horasTrabajo = horas;
+	}
+	
 	@Override
 	public int sueldoBasico() {
 		return 3000;
