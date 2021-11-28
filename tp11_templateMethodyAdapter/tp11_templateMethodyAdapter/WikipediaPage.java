@@ -1,6 +1,6 @@
 package tp11_templateMethodyAdapter;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class WikipediaPage implements IWikipediaPage {
@@ -15,7 +15,7 @@ public class WikipediaPage implements IWikipediaPage {
 	}
 
 	@Override
-	public ArrayList<WikipediaPage> getLinks() {
+	public List<WikipediaPage> getLinks() {
 		return null;
 	}
 
