@@ -18,5 +18,6 @@ public class PropiedadEnComun extends Filtro{
 		if (page.getInfobox().equals(pagina.getInfobox())) {
 			return pagina;
 		}
+		return null;
 	}
 }

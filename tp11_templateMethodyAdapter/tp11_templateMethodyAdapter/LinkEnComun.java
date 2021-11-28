@@ -18,5 +18,6 @@ public class LinkEnComun extends Filtro{
 		if (page.getLink().equals(pagina.getLink())) {
 			return pagina;
 		}
+		return null;
 	}
 }
