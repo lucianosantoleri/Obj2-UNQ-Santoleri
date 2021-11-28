@@ -34,10 +34,14 @@ public abstract class CuentaBancaria {
 	
 	//metodo corregido: asi deberia quedar para que sea un template method
 	public void extraer(int monto) {
-			this.setSaldo(this.getSaldo()-monto);
-			this.agregarMovimiento("Extraccion");
+			this.accionDeExtraccionCompleta(monto);
     }
 	
+	//separamos el metodo extraer para facilitar el template method
+	public void accionDeExtraccionCompleta(int monto) {
+		this.setSaldo(this.getSaldo()-monto);
+		this.agregarMovimiento("Extraccion");
+	} 
 	/*Termino teniendo getters y setters (operaciones primitivas) necesarios. Ademas el temmplate method,
 	 * aplicado en el metodo extraer*/
 }

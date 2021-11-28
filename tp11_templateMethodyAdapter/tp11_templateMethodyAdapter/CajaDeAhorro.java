@@ -12,8 +12,7 @@ public class CajaDeAhorro extends CuentaBancaria{
 	@Override
 	public void extraer(int monto) {
 		if(this.getSaldo()>= monto && this.getLimite()>=monto) {
-			this.setSaldo(this.getSaldo()-monto);
-			this.agregarMovimiento("Extraccion");
+			super.accionDeExtraccionCompleta(monto); //a traves de este template method ahorramos reescribir el codigo
 		}
 	}
 	public int getLimite() {

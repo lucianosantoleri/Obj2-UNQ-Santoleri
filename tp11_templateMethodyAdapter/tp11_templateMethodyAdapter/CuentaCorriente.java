@@ -12,8 +12,7 @@ public class CuentaCorriente extends CuentaBancaria{
 	@Override
 	public void extraer(int monto) {
 		if(this.getSaldo()+this.getDescubierto()>=monto) {
-			this.setSaldo(this.getSaldo()-monto);
-			this.agregarMovimiento("Extraccion");
+			super.accionDeExtraccionCompleta(monto); //a traves de este template method ahorramos reescribir el codigo
 		}
 	}
 
