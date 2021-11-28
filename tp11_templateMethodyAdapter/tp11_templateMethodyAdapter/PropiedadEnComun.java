@@ -15,5 +15,4 @@ public class PropiedadEnComun extends Filtro{
 			return pagina;
 		}
 	}
-
 }
