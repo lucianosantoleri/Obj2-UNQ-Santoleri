@@ -31,6 +31,8 @@ public abstract class CuentaBancaria {
 		movimientos.add(movimiento);
 	}
 	
+	
+	//metodo corregido: asi deberia quedar para que sea un template method
 	public void extraer(int monto) {
 		if(this.getSaldo()>=monto) {
 			this.setSaldo(this.getSaldo()-monto);
