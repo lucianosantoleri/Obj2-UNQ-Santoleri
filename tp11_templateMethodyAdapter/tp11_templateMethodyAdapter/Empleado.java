@@ -11,5 +11,7 @@ public abstract class Empleado {
 	
 	public abstract int sueldoBasico();
 
-	protected abstract int pagoPorFamilia();
+	protected int pagoPorFamilia() {
+		return 0;
+	}
 }
