@@ -1,0 +1,17 @@
+EJERCICIO 6:
+
+1- El libro de Gamma, hace mencion a 3 tipos de adapters: conectables, bidireccionales y parametrizados.
+Los conectables, hace que una clase sea mas reutilizable cuando minimizamos las asunciones que deben hacer otras clases
+para usarla. La adaptacion de interfaces nos permite incorporar nuestra clase a sistemas existentes que podrian esperar interfaces
+diferentes a la de la clase.
+Los bidireccionales son utilizados para aportar transparencia. Un problema potencial de los adapters es que no son transparentes
+a todos los clientes. Los adapters bidireccionales, pueden proporcionar esa transparencia. Resultan utiles cuando dos clientes
+distintos necesitan ver un mismo objeto de distinta forma. Este adapter, se ajusta a las dos clases adaptadas y puede trabajar
+en cualquiera de los dos sistemas.
+Los parametrizados, son los adapter que permiten la utilizacion de adapters conectables, sobretodo en lenguajes como samlltalk, a
+traves de la utilizacion de bloques. La construccion block permite la adaptacion sin necesidad de subclases. Un bloque puede 
+adaptar una peticion y el adapter puede almacenar un bloque para cada peticion individual.
+
+2- Los  tipos de adapter encuentran su mayor diferenciacion el uno del otro en el modo de aplicarse y desarrollarse sobretodo.
+
+3- Las 2 primeras si, la tercera, es mas comun y mejor desarrollada aplicada en smalltalk.
