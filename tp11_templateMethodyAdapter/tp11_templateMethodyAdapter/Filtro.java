@@ -1,6 +1,7 @@
 package tp11_templateMethodyAdapter;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class Filtro {
 	/*
@@ -9,7 +10,7 @@ public abstract class Filtro {
 	 */
 
 	protected  List<IWikipediaPage> getSimilarPages(WikipediaPage pagina, List<IWikipediaPage> listaDePaginas) {
-		List<IWikipediaPage> paginasFiltradas = listaDePaginas.stream().filter(pag -> this.procesarHeuristica(pagina, pag)).toList();
+		List<IWikipediaPage> paginasFiltradas = listaDePaginas.stream().filter(pag -> this.procesarHeuristica(pagina, pag)).collect(Collectors.toList());
 		return paginasFiltradas;
 	}
 
