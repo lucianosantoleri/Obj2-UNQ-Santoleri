@@ -8,7 +8,7 @@ public class Notificador {
 	private File file;
 	
 	public Notificador() {
-		this.sistema = new SistemaDeReferencias(null);
+		this.sistema = new SistemaDeReferencias();
 	}
 	
 	public File getFile() {
