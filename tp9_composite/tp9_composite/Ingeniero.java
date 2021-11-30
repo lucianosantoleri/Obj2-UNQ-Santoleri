@@ -1,39 +1,68 @@
 package tp9_composite;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class Ingeniero extends Ejercito{
+public class Ingeniero extends Peloton{
+	// HOJA
 
 	private int lajas;
-	
-	public Ingeniero(ArrayList<Ejercito> ejer, int desti) {
-		super(ejer, desti);
-		ejer.add(this);
-	}
-	
-	@Override
-	public void caminar() {
-		this.descontarHaciaElDestino();
-		this.descontarLaja();
+
+	public Ingeniero(int lajas) {
+		setLajas(lajas);
 	}
 
-	private void descontarHaciaElDestino() {
-		if(super.destino > 0) {
-			super.destino = super.destino - 1;
-		}
+	private void setLajas(int lajas) {
+		this.lajas = lajas;
 	}
 
 	public int getLajas() {
-		return lajas;
+		return this.lajas;
 	}
 
-	public void setLajas(int lajas) {
-		this.lajas = lajas;
+	@Override
+	public void caminarHasta(Integer destino) {
+		this.trazarCaminoCortoHacia(destino);		
+		this.caminarYDejarLajasHacia(destino);		
+		this.setUbicacion(destino);
+		
+	}
+
+	public void caminarYDejarLajasHacia(Integer destino) {
+		for(int paso=1; paso<=destino; paso++) {
+			this.setUbicacion(paso);
+			this.dejarLaja();
+		}
 	}
 	
-	public void descontarLaja() {
-		if(lajas > 0) {
-			lajas = lajas - 1;
-		}
+	public void dejarLaja() {
+		if (this.getLajas() > 0) {
+			setLajas(this.getLajas() - 1);
+			System.out.println("Se ha dejado una laja en el camino. Quedan " + this.getLajas());
+		} else {
+			System.out.print("No hay más lajas en la bolsa para dejar. El Ingeniero continuará su camino normalmente. ");
+			System.out.println("Ya ha dado " + this.getUbicacion() + " pasos.");
+		}							
+	}
+
+	public Integer trazarCaminoCortoHacia(Integer destino) {
+		System.out.println("El Ingeniero ha trazado el camino hacia el destino. Se deben dar " + destino + " pasos.");
+		System.out.println("Dispone de  " + this.getLajas() + " lajas en su bolsa.");
+		return destino;
+	}
+
+	@Override
+	public void reclutar(Peloton soldado) {
+		System.out.println("No tiene la autoridad para reclutar");
+	}
+	
+	@Override
+	public List<Peloton> getSoldados() {
+		System.out.println("No tiene la autoridad para estar a cargo de ningún pelotón");
+		return null;
+	}
+	
+	@Override
+	public void desterrar(Peloton soldados) {
+		System.out.println("No tiene la autoridad para desterrar a ningún soldado");
 	}
 }

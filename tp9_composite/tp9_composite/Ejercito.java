@@ -1,20 +1,11 @@
 package tp9_composite;
 
-import java.util.*;
+public class Ejercito extends Peloton {
+	//COMPONENTE
 
-public abstract class Ejercito implements IEejercito {
-	
-	protected ArrayList<Ejercito> ejercito = new ArrayList<Ejercito>();
-	protected int destino;
-	
-	public Ejercito(ArrayList<Ejercito> ejer, int desti) {
-		this.ejercito = ejer;
-		this.destino = desti;
+	@Override
+	public void caminarHasta(Integer destino) {
+		this.getSoldados().stream().forEach(soldado -> {	soldado.caminarHasta(destino);	});
+		this.setUbicacion(destino);
 	}
-
-	public void aniadirAlEjercito(Ejercito miembro) {
-		ejercito.add(miembro);
-	}
-	
-	public abstract void caminar();
 }
