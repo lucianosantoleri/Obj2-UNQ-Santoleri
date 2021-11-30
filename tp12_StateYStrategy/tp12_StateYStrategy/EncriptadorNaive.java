@@ -1,9 +1,22 @@
 package tp12_StateYStrategy;
 
-public abstract class EncriptadorNaive implements IEncriptadorNaive {
+public class EncriptadorNaive {
+	/*
+	 * Delega las peticiones a la instancia de EstrategiaEncriptado que contiene, la cuál puede elegirse manualmente a través del setter
+	 */
 
+	private EstrategiaEncriptado estrategia;
+
+	public String enciptar(String stringOrigen) {
+		return this.estrategia.encriptar(stringOrigen);		
+	}
 	
-	public abstract String encriptar(String texto);
-	
-	public abstract String desencriptar(String texto);
+	public String desencriptar(String stringOrigen) {
+		return this.estrategia.desencriptar(stringOrigen);
+	}
+
+	public void setEstrategia(EstrategiaEncriptado estrategia) {
+		this.estrategia = estrategia;
+	}
+
 }

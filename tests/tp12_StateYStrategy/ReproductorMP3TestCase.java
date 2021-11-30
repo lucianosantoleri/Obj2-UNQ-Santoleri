@@ -16,7 +16,7 @@ public class ReproductorMP3TestCase {
 	public void setUp() {
 		
 		//sut
-		song = new ModoSeleccionCanciones(cancion);
+		song = new SeleccionDeCanciones(cancion);
 		songDos = new ModoInicio(cancion);
 		cancion = "Profugos";
 	}
