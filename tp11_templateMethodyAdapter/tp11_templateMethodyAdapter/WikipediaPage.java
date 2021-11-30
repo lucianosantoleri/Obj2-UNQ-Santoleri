@@ -21,12 +21,12 @@ public class WikipediaPage implements IWikipediaPage {
 	}
 
 	@Override
-	public List<WikipediaPage> getLinks() {
+	public List<IWikipediaPage> getLinks() {
 		return null;
 	}
 
 	@Override
-	public Map<String, WikipediaPage> getInfobox() {
+	public Map<String, IWikipediaPage> getInfobox() {
 		return null;
 	}
 
