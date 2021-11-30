@@ -1,23 +1,27 @@
 package tp11_templateMethodyAdapter;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class LinkEnComun extends Filtro{
+public class LinkEnComun extends Filtro {
 
-	public LinkEnComun() {
-		
+	@Override
+	protected Boolean procesarHeuristica(WikipediaPage pagina, WikipediaPage otraPagina) {		
+		return this.compartenLinks(pagina, otraPagina);
+	}
+
+	private Boolean compartenLinks(WikipediaPage pagina, WikipediaPage otraPagina) {
+		// toma las páginas que comparten al menos un link con la página dada por parámetro
+		return pagina.getLinks().stream().anyMatch(link -> this.linkEstaEn(link, otraPagina));
+	}
+
+	private Boolean linkEstaEn(WikipediaPage link, WikipediaPage otraPagina) {
+		return otraPagina.getLinks().contains(link);
 	}
 
 	@Override
-	public List<WikipediaPage> getSimilarPages(WikipediaPage page, List<WikipediaPage> wikipedia) {
-		return wikipedia.stream().filter(pagina -> this.mismoLink(page, pagina)).collect(Collectors.toList());
-	}
-
-	private WikipediaPage mismoLink(WikipediaPage page, WikipediaPage pagina) {
-		if (page.getLink().equals(pagina.getLink())) {
-			return pagina;
-		}
+	public List<IWikipediaPage> getSimilarPages(WikipediaPage page, List<IWikipediaPage> wikipedia) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
 }

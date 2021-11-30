@@ -1,24 +1,19 @@
 package tp11_templateMethodyAdapter;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class MismaLetraInicial extends Filtro {
-	
-	public MismaLetraInicial() {
-		
-	}
 
 	@Override
-	public List<WikipediaPage> getSimilarPages(WikipediaPage page, List<WikipediaPage> wikipedia) {
-		return wikipedia.stream().filter(pagina -> this.mismaLetraInicial(page,pagina)).collect(Collectors.toList());
+	protected Boolean procesarHeuristica(WikipediaPage pagina, WikipediaPage otraPagina) {
+		return this.tienenMismaInicial(pagina, otraPagina);
+	}
+	
+	private Boolean tienenMismaInicial(WikipediaPage pagina, WikipediaPage otraPagina) {
+		return this.inicialEnTituloDe(pagina) == this.inicialEnTituloDe(otraPagina);
 	}
 
-	public WikipediaPage mismaLetraInicial(WikipediaPage pagina1,WikipediaPage pagina2) {
-		
-		if(pagina1.getTitle().charAt(0) == pagina2.getTitle().charAt(0)) {
-			return pagina2;
-		}
-		return null;
+	private char inicialEnTituloDe(WikipediaPage pagina) {
+		return pagina.getTitle().charAt(0);
 	}
+
+
 }

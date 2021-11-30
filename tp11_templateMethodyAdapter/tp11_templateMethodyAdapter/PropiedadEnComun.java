@@ -1,23 +1,24 @@
 package tp11_templateMethodyAdapter;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Set;
 
 public class PropiedadEnComun extends Filtro{
 
-	public PropiedadEnComun() {
-		
-	}
-
 	@Override
-	public List<WikipediaPage> getSimilarPages(WikipediaPage page, List<WikipediaPage> wikipedia) {
-		return wikipedia.stream().filter(pagina -> this.mismoInfobox(page, pagina)).collect(Collectors.toList());
+	protected Boolean procesarHeuristica(WikipediaPage pagina, WikipediaPage otraPagina) {
+		return this.compartenPropiedades(pagina, otraPagina);
 	}
 
-	private Object mismoInfobox(WikipediaPage page, WikipediaPage pagina) {
-		if (page.getInfobox().equals(pagina.getInfobox())) {
-			return pagina;
-		}
-		return null;
+	private Boolean compartenPropiedades(WikipediaPage pagina, WikipediaPage otraPagina) {
+		return this.propiedadesDe(pagina).stream().anyMatch(propiedad -> this.contienePropiedad(otraPagina, propiedad));
 	}
+
+	private Set<String> propiedadesDe(WikipediaPage pagina) {
+		return pagina.getInfobox().keySet();
+	}
+
+	private Boolean contienePropiedad(WikipediaPage pagina, String propiedad) {
+		return pagina.getInfobox().containsKey(propiedad);
+	}
+
 }
