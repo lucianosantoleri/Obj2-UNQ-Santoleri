@@ -14,6 +14,6 @@ public abstract class Filtro {
 		return paginasFiltradas;
 	}
 
-	protected abstract Boolean procesarHeuristica(WikipediaPage pagina, WikipediaPage otraPagina);
+	protected abstract Boolean procesarHeuristica(WikipediaPage pagina, IWikipediaPage pag);
 
 }

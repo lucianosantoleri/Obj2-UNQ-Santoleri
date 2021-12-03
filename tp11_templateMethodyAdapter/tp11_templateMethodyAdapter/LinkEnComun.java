@@ -4,7 +4,6 @@ import java.util.List;
 
 public class LinkEnComun extends Filtro {
 
-	@Override
 	protected Boolean procesarHeuristica(WikipediaPage pagina, WikipediaPage otraPagina) {		
 		return this.compartenLinks(pagina, otraPagina);
 	}
@@ -14,12 +13,18 @@ public class LinkEnComun extends Filtro {
 		return pagina.getLinks().stream().anyMatch(link -> this.linkEstaEn(link, otraPagina));
 	}
 
-	private Boolean linkEstaEn(WikipediaPage link, WikipediaPage otraPagina) {
+	private Boolean linkEstaEn(IWikipediaPage link, WikipediaPage otraPagina) {
 		return otraPagina.getLinks().contains(link);
 	}
 
 	@Override
 	public List<IWikipediaPage> getSimilarPages(WikipediaPage page, List<IWikipediaPage> wikipedia) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Boolean procesarHeuristica(WikipediaPage pagina, IWikipediaPage pag) {
 		// TODO Auto-generated method stub
 		return null;
 	}
