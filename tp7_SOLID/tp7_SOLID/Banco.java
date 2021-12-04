@@ -2,36 +2,48 @@ package tp7_SOLID;
 
 import java.util.ArrayList;
 
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Banco {
+	
+	List<Cliente> clientes = new ArrayList<Cliente>();
+	List<SolicitudCredito> solicitudes = new ArrayList<SolicitudCredito>();
+	
+	public List<Cliente> getClientes() {
+		return this.clientes;
+	}
 
-	ArrayList<Cliente> clientes = new ArrayList<Cliente>();
-	ArrayList<Solicitud> solicitudes = new ArrayList<Solicitud>();
+	public List<SolicitudCredito> getSolicitudes() {
+		return this.solicitudes;
+	}
 
-	public ArrayList<Cliente> getClientes() {
-		return clientes;
+	public Boolean tieneClientes() {
+		return !this.getClientes().isEmpty();
 	}
 
 	public void agregarCliente(Cliente cliente) {
-		clientes.add(cliente);
+		this.getClientes().add(cliente);
 	}
-	
-	public void eliminarCliente(Cliente cliente) {
-		clientes.remove(cliente);
+
+	public Boolean tieneSolicitudes() {
+		return !this.getSolicitudes().isEmpty();
 	}
-	
-	public void registrarSolicitudCredito(Solicitud solicitud) {
-		solicitudes.add(solicitud);
+
+	public void registrarSolicitud(SolicitudCredito solicitud) {
+		this.getSolicitudes().add(solicitud);
 	}
-	
-	public void otorgarCredito(Cliente cliente) {
-		
+
+	public Float getTotalADesembolsar() {
+		return this.getSolicitudesAprobadas().stream().map(SolicitudCredito::getMonto)
+				.reduce(0f, (acumulado, monto)-> {return acumulado + monto;});
 	}
-	
-	public Float montoTotalSolicitudes() {
-		return null; 
+
+	private List<SolicitudCredito> getSolicitudesAprobadas() {
+		return this.getSolicitudes().stream().filter(solicitud-> solicitud.esAceptable())
+				.collect(Collectors.toList());
 	}
-	
-	public Float montoSolicitud() {
-		return null;
-	}
+
 }

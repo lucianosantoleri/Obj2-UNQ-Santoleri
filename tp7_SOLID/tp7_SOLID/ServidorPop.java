@@ -1,10 +1,9 @@
 package tp7_SOLID;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServidorPop implements IServidor {
+public class ServidorPop implements IServidorCorreo {
 
 	public List<Correo> recibirNuevos(String user, String pass) {
 		List<Correo> retorno = new ArrayList<Correo>();
@@ -23,22 +22,21 @@ public class ServidorPop implements IServidor {
       //realiza lo necesario para enviar el correo.		
 	}
 
+	/* estos métodos no corresponden a esta clase de Servidor, estaría violando el principio de Responsabilidad Única.
 	@Override
 	public float tazaDeTransferencia() {
 		//no corresponde
 		return 0;
 	}
-
 	@Override
 	public void resetear() {
          //no corresponde		
 	}
-
 	@Override
 	public void realizarBackUp() {
 		//no corresponde
 		
-	}
+	}*/
 
 
 

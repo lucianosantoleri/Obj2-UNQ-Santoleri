@@ -1,8 +1,10 @@
 package tp7_SOLID;
 
+
 import java.util.List;
 
-public interface IServidor {
+public interface IServidorCorreo {
+	// acá encontramos violaciones al principio de Segregaciónd de Interfaces
 	
 	public List<Correo> recibirNuevos(String user, String pass);
 
@@ -10,10 +12,10 @@ public interface IServidor {
 
 	public void enviar(Correo correo);
 	
+	/*Todas estas firmas deberían ser parte de otra interface que se encargue de el estado de un servidor.
 	public float tazaDeTransferencia();
-
 	public void resetear();
 	
-	public void realizarBackUp();
+	public void realizarBackUp();*/
 
 }

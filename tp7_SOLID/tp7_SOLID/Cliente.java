@@ -2,64 +2,62 @@ package tp7_SOLID;
 
 public class Cliente {
 
+	private static final String INVALID_NAME = "El nombre no puede estar en blanco";
 	private String nombre;
 	private String apellido;
-	private Float edad;
+	private Integer edad;
 	private String direccion;
 	private Float sueldoNetoMensual;
-	private Propiedad propiedad;
-	
-	public Cliente(String suNombre, String suApellido, Float suEdad, String suDireccion, Float suSueldoNetoMensual,
-			       Propiedad suPropiedad) {
-		this.nombre = suNombre;
-		this.apellido = suApellido;
-		this.edad = suEdad;
-		this.direccion = suDireccion;
-		this.sueldoNetoMensual = suSueldoNetoMensual;
-		this.propiedad = suPropiedad;
-	}
-	
-	public Propiedad getPropiedad() {
-		return this.propiedad;
-	}
-	
-	public Float getEdad() {
-		return edad;
-	}
-	
-	public void setEdad(Float edad) {
+
+	public Cliente(String nombre, String apellido, Integer edad, String direccion, Float sueldo) {
+		this.nombre = nombre;
+		this.apellido = apellido;
 		this.edad = edad;
-	}
-	
-	public String getDireccion() {
-		return direccion;
-	}
-	
-	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+		this.sueldoNetoMensual = sueldo;
+	}
+
+	public Cliente(String string) {
+		this.nombre = string;
 	}
 	
-	public Float getSueldoNetoMensual() {
-		return sueldoNetoMensual;
+	public static Cliente nuevo(String string) {
+		assertIsValidName(string);
+		return new Cliente(string);
+	}
+
+	private static void assertIsValidName(String string) {
+		if (!isValidName(string)) throw new RuntimeException(INVALID_NAME);
+	}
+
+	private static boolean isValidName(String string) {
+		return !string.isBlank();
 	}
 	
-	public void setSueldoNetoMensual(Float sueldoNetoMensual) {
-		this.sueldoNetoMensual = sueldoNetoMensual;
-	}
-	
+	////////////////////
+
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
-	
+
+	public Integer getEdad() {
+		return this.edad;
+	}
+
+	public String getDireccion() {
+		return this.direccion;
+	}
+
+	public Float getSueldoNetoMensual() {
+		return this.sueldoNetoMensual;
+	}
+
 	public String getApellido() {
-		return apellido;
+		return this.apellido;
 	}
-	
-	public Float sueldoNetoAnual() {
-		return sueldoNetoMensual * 12;
+
+	public Float getSueldoNetoAnual() {
+		return getSueldoNetoMensual() * 12;
 	}
-	
-	public void solicitarCredito(Banco banco) {
-		
-	}
+
 }
