@@ -1,8 +1,21 @@
 package tp9_composite;
 
-public interface Parcela {
+//PATRON COMPOSITE
+//ROL: Component
+
+public abstract class Parcela {
+
+	public abstract double getGananciaAnual();
 	
-	public Parcela composicion();
-	public int getPrecio();
-	public Boolean verificarCompuesto();
+	public void agregarParcela(Parcela parcela) {
+		// Metodo hook
+	}
+	
+	public void eliminarParcela(Parcela parcela) {
+		// Metodo hook
+	}
+	
+	public Parcela getChild(int nro) {
+		return null;
+	}
 }

@@ -1,12 +1,11 @@
 package tp9_composite;
 
-public class Trigo extends Compuesto{
 
-	public int getPrecio() {
-		return super.precio;
+public class Trigo implements Cultivo {
+
+	@Override
+	public double getGanancia() {
+		return 300;
 	}
 
-	public void setPrecio(int precio) {
-		super.precio = precio;
-	}
 }
